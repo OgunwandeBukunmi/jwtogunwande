@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/output.css
+">
+
+<header class="text-right flex gap-2 justify-end"> 
+  <% if(user){%>
+  <l1>Welcome <%=user.email%></l1>
+    <a href="/logout" class="hover:text-red-300 transition">Logout</a>
+    <%}else{%>
+  <a href="/" class="hover:text-red-300 transition">Home</a>
+        <a href="/signup" class="hover:text-red-300 transition">Signup</a>
+        <a href="/login" class="hover:text-red-300 transition">Login</a>
+        <%}%>
+       
+      </div></header>

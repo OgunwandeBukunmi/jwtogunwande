@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/output.css" type="text/css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="container mx-auto flex justify-between items-center">
+      <h1 class="text-[40px] text-blue-900">F</h1>
+      <% if (user) {%>
+      <li>welcome <%=user.email%></li>
+      <a
+        href="/logout"
+        class="hover:text-red-900 px-2 border rounded-md border-red-900 bg-red-300 text-white"
+        >Logout</a
+      >
+      <% }else{%>
+
+      <div class="flex gap-4">
+        <a href="/signup" class="hover:text-red-300 transition">Signup</a>
+        <a href="/login" class="hover:text-red-300 transition">Login</a>
+      </div>
+      <% }%>
+    </nav>
+    <section
+      class="hero p-2 container mx-auto h-96 w-[100%] gap-2 flex flex-col md:flex-row"
+    >
+      <div
+        class="h-[100%] w-1/2 inline bg-red-600 border rounded-md md:w-[100%]"
+      ></div>
+      <div
+        class="h-[100%] w-1/2 inline flex flex-col justify-around md:w-[100%] items-center"
+      >
+        <h1>WELCOME HOME.....</h1>
+        <h4>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+          asperiores nam cupiditate, assumenda repellat ea quis, eum, placeat
+          accusamus inventore vel ratione dolorem voluptatum quia quas excepturi
+          est nostrum a?
+        </h4>
+        <a
+          href="/login"
+          class="border border-red-900 text-white bg-red-300 px-2 rounded-md"
+          >Login</a
+        >
+      </div>
+    </section>
+  </body>
+  <script>
+    const file = document.getElementById("file");
+    setTimeout(() => console.log(file), 1000);
+  </script>
+</html>
+<%- include("partials/footer"); -%>
